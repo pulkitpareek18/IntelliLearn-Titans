@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { createContext } from "react";
 
-export const server = import.meta.env.VITE_AI_API_URL;
+export const server = import.meta.env.VITE_BACKEND_API_URL;
 
 export const Context = createContext({ isAuthenticated: false });
 
