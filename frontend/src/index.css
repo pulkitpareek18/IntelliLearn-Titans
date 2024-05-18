@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.response-container a {
+    font-weight: bold; /* Optional: Make the link bold */
+    background: linear-gradient(to right, blue, purple);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+  /* Progress bar container */
+  .progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  /* Progress bar */
+  .progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 0.5s ease-in-out;
+  }
