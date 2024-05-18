@@ -88,7 +88,7 @@ const Quiz = () => {
             let bodyContent = JSON.stringify({ "prompt": `subject: ${subject}, difficulty: ${difficulty}, noOfQuestions: ${noOfQuestions}` });
 
             let reqOptions = {
-                url: `${process.env.AI_API_URL}`,
+                url: `${import.meta.env.VITE_AI_API_URL}`,
                 method: "POST",
                 headers: headersList,
                 data: bodyContent,

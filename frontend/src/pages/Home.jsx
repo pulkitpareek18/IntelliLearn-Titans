@@ -6,7 +6,7 @@ import backgroundImage from '../assets/homeBG.jpg';
 function Home() {
     const { isAuthenticated } = useContext(Context);
 
-    if (!isAuthenticated) return <Navigate to={"/login"} />;
+    // if (!isAuthenticated) return <Navigate to={"/login"} />;
 
     return (
         <>
