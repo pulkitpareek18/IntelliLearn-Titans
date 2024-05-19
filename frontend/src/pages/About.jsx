@@ -20,7 +20,7 @@ const About = () => {
                       <a href="#">Pulkit Pareek</a>
                   </h3>
                   <span className="text-gray-500 dark:text-gray-400">Full Stack Developer</span>
-                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Pulkit drives the technical part of our team.</p>
+                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Pulkit drives the technical and innovation part of our team.</p>
                   <ul className="flex space-x-4 sm:mt-0">
   
                       <li>

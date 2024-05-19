@@ -15,6 +15,12 @@ function App() {
     const recognitionRef = useRef(null);
     const synthRef = useRef(window.speechSynthesis);
 
+    const promptBody = `Your name is Gyan and you are an student homework assitant focused to help students in the easiest way possible.
+                        You are developed by Team Titans. You are very intelligent and can answer any question asked to you.
+                        If any explict question is asked to you please deny to answer that. 
+                        You can provide youtube video links to students for study of any topic. You will now response to this prompt. 
+                        Prompt:`
+
     useEffect(() => {
         const handleScroll = () => {
             setShowScroll(window.scrollY > 200);
@@ -70,7 +76,7 @@ function App() {
                 url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${import.meta.env.VITE_API_GENERATIVE_LANGUAGE_CLIENT}`,
                 method: "post",
                 data: {
-                    contents: [{ parts: [{ text: question }] }],
+                    contents: [{ parts: [{ text: promptBody+question }] }],
                 },
             });
 
@@ -87,11 +93,25 @@ function App() {
         setQuestion("");
         setGeneratingAnswer(false);
     }
-
+    
     const readAnswerOutLoud = (text) => {
         const utterance = new SpeechSynthesisUtterance(text);
+        const synth = window.speechSynthesis;
+        const voices = synth.getVoices();
+    
+        // Find an Indian English voice
+        const indianVoice = voices.find(voice => 
+            voice.lang === 'en-IN' || voice.name.toLowerCase().includes('india')
+        );
+    
+        // Set the voice if an Indian English voice is found
+        if (indianVoice) {
+            utterance.voice = indianVoice;
+        }
+    
         synthRef.current.speak(utterance);
     };
+    
 
     const stopSpeaking = () => {
         synthRef.current.cancel(); // Cancel the current text-to-speech process
