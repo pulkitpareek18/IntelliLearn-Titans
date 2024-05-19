@@ -12,7 +12,7 @@ const Quiz = () => {
     const [reviewMode, setReviewMode] = useState(false);
 
     const [subject, setSubject] = useState("");
-    const [difficulty, setDifficulty] = useState("");
+    const [difficulty, setDifficulty] = useState("Easy");
     const [noOfQuestions, setNoOfQuestions] = useState(10);
     const [generating, setGenerating] = useState(false);
 
