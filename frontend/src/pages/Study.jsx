@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
+import { Context } from "../main";
+import { Navigate } from "react-router-dom";
+
 
 const Study = () => {
+
+    const { isAuthenticated } = useContext(Context);
+    if (!isAuthenticated) return <Navigate to={"/login"} />;
+
     const [subject, setSubject] = useState("");
     const [language, setLanguage] = useState("Hindi");
     const [additionalInfo, setAdditionalInfo] = useState("");

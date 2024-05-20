@@ -1,10 +1,16 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { FaArrowUp, FaMicrophone, FaMicrophoneSlash, FaVolumeUp, FaVolumeMute } from "react-icons/fa"; // Import the scroll-to-top, microphone, and volume icons
+import { Navigate } from "react-router-dom";
+import { Context } from "../main";
 
-function App() {
+function Gyan() {
+
+    const { isAuthenticated } = useContext(Context);
+    if (!isAuthenticated) return <Navigate to={"/login"} />;
+
     const [question, setQuestion] = useState("");
     const [answer, setAnswer] = useState("");
     const [generatingAnswer, setGeneratingAnswer] = useState(false);
@@ -213,4 +219,4 @@ function App() {
     );
 }
 
-export default App;
+export default Gyan;
