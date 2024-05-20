@@ -86,7 +86,7 @@ function Home() {
                                     <h3 className="text-2xl font-semibold mb-4 text-gray-800">Gyan AI</h3>
                                     <p className="leading-relaxed text-gray-600 mb-6">Get instant answers to your questions and clear your doubts with our AI-powered assistant.</p>
                                     <Link
-                                        to="/gyanai"
+                                        to="/gyan"
                                         className="mt-4 inline-flex items-center px-5 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-medium text-lg rounded-lg transition-colors duration-300 hover:from-purple-500 hover:via-pink-500 hover:to-red-500"
                                     >
                                         Visit Gyan AI
