@@ -26,7 +26,7 @@ const Study = () => {
             });
 
             let reqOptions = {
-                url: "http://localhost:4000/api/v1/ai/studyVideos",
+                url: `${import.meta.env.VITE_AI_API_URL}/studyVideos`,
                 method: "POST",
                 headers: headersList,
                 data: bodyContent,
