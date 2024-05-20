@@ -14,6 +14,7 @@ import Gyan from "./pages/Gyan";
 import Study from "./pages/Study";
 
 
+
 function App() {
 
   return (

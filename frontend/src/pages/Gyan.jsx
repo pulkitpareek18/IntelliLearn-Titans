@@ -1,10 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { FaArrowUp, FaMicrophone, FaMicrophoneSlash, FaVolumeUp, FaVolumeMute } from "react-icons/fa"; // Import the scroll-to-top, microphone, and volume icons
+import redirectIfNotAuthenticated from "../features/redirectIfNotAuthenticated";
+
 
 function App() {
+    redirectIfNotAuthenticated();
+
     const [question, setQuestion] = useState("");
     const [answer, setAnswer] = useState("");
     const [generatingAnswer, setGeneratingAnswer] = useState(false);
