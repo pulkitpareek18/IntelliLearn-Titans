@@ -173,7 +173,7 @@ const Quiz = () => {
                     <div className='w-50 mx-2'>
                         <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select Difficulty</label>
                         <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected value="Easy">Easy</option>
+                            <option value="Easy">Easy</option>
                             <option value="Medium">Medium</option>
                             <option value="Hard">Hard</option>
                             <option value="Very Hard">Very Hard</option>
