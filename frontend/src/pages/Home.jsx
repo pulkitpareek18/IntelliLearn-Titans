@@ -111,51 +111,6 @@ function Home() {
 
 
             </div>
-            {/* Get Started Section */}
-            <section className="py-12 bg-gray-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-extrabold text-gray-900">Get Started</h2>
-                        <p className="text-xl text-gray-500">Start your personalized learning journey today</p>
-                    </div>
-                    <div className="flex flex-wrap -m-4">
-                        <div className="p-4 w-full md:w-1/2">
-                            <div className="h-full bg-white p-8 rounded shadow-md">
-                                <h3 className="text-xl font-medium title-font mb-4">Take a Quiz</h3>
-                                <p className="leading-relaxed">Test your knowledge with our personalized quizzes and track your progress.</p>
-                                <Link to="/quiz" className="mt-4 inline-flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-colors duration-300">
-                                    Start Quiz
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="p-4 w-full md:w-1/2">
-                            <div className="h-full bg-white p-8 rounded shadow-md">
-                                <h3 className="text-xl font-medium title-font mb-4">Gyan AI</h3>
-                                <p className="leading-relaxed">Get instant answers to your questions and clear your doubts with our AI-powered assistant.</p>
-                                <Link to="/gyanai" className="mt-4 inline-flex items-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-colors duration-300">
-                                    Visit Gyan AI
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Footer */}
-
-            <footer className="bg-gray-900 py-4">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center items-center bg-gray-800 p-3 rounded-lg shadow-lg">
-            <img src={logo} alt="IntelliLearn Logo" className="w-12 h-12 mr-4 rounded-full border-2 border-white" />
-            <p className="text-white text-lg font-semibold">IntelliLearn by Team Titans</p>
-        </div>
-    </div>
-</footer>
-
-
-
-
-        </div>
         </>
 
     );
