@@ -7,6 +7,8 @@ export const ai = async (req, res) => {
     
     format to be followed:
     don't send the below object, instead generate one with the given prompot in the below format
+    keep the correct answer option different do not have a same option with correct answer for all questions
+    for ex. do not keep option 1 as correct answer for all questions keep it different for each question
 
 
     questions = [

@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
+import { Context } from "../main";
+import { Navigate } from "react-router-dom";
+
 
 const Study = () => {
+
+    const { isAuthenticated } = useContext(Context);
+    if (!isAuthenticated) return <Navigate to={"/login"} />;
+
     const [subject, setSubject] = useState("");
     const [language, setLanguage] = useState("Hindi");
     const [additionalInfo, setAdditionalInfo] = useState("");
@@ -26,7 +33,7 @@ const Study = () => {
             });
 
             let reqOptions = {
-                url: "http://localhost:4000/api/v1/ai/studyVideos",
+                url: `${import.meta.env.VITE_AI_API_URL}/studyVideos`,
                 method: "POST",
                 headers: headersList,
                 data: bodyContent,

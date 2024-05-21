@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import arrowIcon from '../assets/arrowIcon.png';
 import backgroundImage from '../assets/Bg.png'; // Add your background image import
 import axios from 'axios';
+import { Navigate } from 'react-router-dom';
+import { Context } from '../main';
 
 const Quiz = () => {
+
+    const { isAuthenticated } = useContext(Context);
+    if (!isAuthenticated) return <Navigate to={"/login"} />;
+
     // Define the state for storing the current question index, whether the answer is correct, the score, user responses, and review mode
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [isCorrect, setIsCorrect] = useState(null);
