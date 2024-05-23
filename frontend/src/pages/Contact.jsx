@@ -29,10 +29,10 @@ const Contact = () => {
                   Technical support
                 </p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                  support@taskmaster.com
+                  pulkitpareekofficial@gmail.com
                 </p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                  +91-8743777777
+                  +91-81144 15905
                 </p>
               </div>
             </div>
@@ -48,13 +48,13 @@ const Contact = () => {
               </div>
               <div className="ml-6 grow">
                 <p className="mb-2 font-bold dark:text-white">
-                  Sales questions
+                  Query & sales
                 </p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                  sales@taskmaster.com
+                  magnuschase2607@gmail.com
                 </p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                +91-8743999999
+                +91-70376 47655
                 </p>
               </div>
             </div>
@@ -69,12 +69,12 @@ const Contact = () => {
                 </div>
               </div>
               <div className="ml-6 grow">
-                <p className="mb-2 font-bold dark:text-white">Press</p>
+                <p className="mb-2 font-bold dark:text-white">Marketing and Research</p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                  press@taskmaster.com
+                  prabhatsingh9185@gmail.com
                 </p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                +91-8743741111
+                +91 83680 35139
                 </p>
               </div>
             </div>
@@ -91,10 +91,10 @@ const Contact = () => {
               <div className="ml-6 grow">
                 <p className="mb-2 font-bold dark:text-white">Bug report</p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                  bugs@taskmaster.com
+                  pulkitpareekofficial@gmail.com
                 </p>
                 <p className="text-neutral-500 dark:text-neutral-200">
-                +91-8743333333
+                +91-81144 15905
                 </p>
               </div>
             </div>

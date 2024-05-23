@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import arrowIcon from '../assets/arrowIcon.png';
 import backgroundImage from '../assets/Bg.png'; // Add your background image import
 import axios from 'axios';
@@ -78,8 +78,23 @@ const Quiz = () => {
     ]
     );
 
-
-
+    useEffect(() => {
+        const fetchData = async () => {
+            let reqOptions = {
+                url: `${import.meta.env.VITE_AI_API_URL}/daily-quiz`,
+                method: "GET",
+            }
+    
+            let response = await axios.request(reqOptions);
+    
+            // Now you can use the questionsArray in your code
+            console.log(response.data.questions);
+            setQuestions(response.data.questions);
+        }
+    
+        fetchData();
+    }, []);
+    
 
 
     const generateQuizhandler = async (e) => {
