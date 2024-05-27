@@ -1,12 +1,16 @@
 import { Navigate } from 'react-router-dom';
 import { getCookie } from '../components/Header';
+import { Context } from '../main';
+import { useContext } from 'react';
+
 
 const Profile = () => {
 
     if (!getCookie("loggedIn")) return <Navigate to={"/login"} />;
-    
 
-console.log(user)
+    const {user} = useContext(Context);
+
+    console.log(user)
 
   return (
     <div className="bg-white w-2/4 mt-32 mx-auto overflow-hidden shadow rounded-lg border">
