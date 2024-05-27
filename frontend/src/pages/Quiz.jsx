@@ -1,19 +1,19 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import arrowIcon from '../assets/arrowIcon.png';
 import backgroundImage from '../assets/Bg.png'; // Add your background image import
 import axios from 'axios';
 import { Navigate } from 'react-router-dom';
-import { Context } from '../main';
+import { getCookie } from '../components/Header';
 
 const Quiz = () => {
 
-    const { isAuthenticated } = useContext(Context);
-    if (!isAuthenticated) return <Navigate to={"/login"} />;
+    if (!getCookie("loggedIn")) return <Navigate to={"/login"} />;
 
     // Define the state for storing the current question index, whether the answer is correct, the score, user responses, and review mode
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [isCorrect, setIsCorrect] = useState(null);
     const [score, setScore] = useState(0);
+    const [quizHeading, setQuizHeading] = useState("Daily Quiz");
     const [responses, setResponses] = useState([]);
     const [reviewMode, setReviewMode] = useState(false);
 
@@ -78,8 +78,23 @@ const Quiz = () => {
     ]
     );
 
-
-
+    useEffect(() => {
+        const fetchData = async () => {
+            let reqOptions = {
+                url: `${import.meta.env.VITE_AI_API_URL}/daily-quiz`,
+                method: "GET",
+            }
+    
+            let response = await axios.request(reqOptions);
+    
+            // Now you can use the questionsArray in your code
+            console.log(response.data.questions);
+            setQuestions(response.data.questions);
+        }
+    
+        fetchData();
+    }, []);
+    
 
 
     const generateQuizhandler = async (e) => {
@@ -105,6 +120,7 @@ const Quiz = () => {
             // Now you can use the questionsArray in your code
             console.log(response.data.questions);
             setQuestions(response.data.questions);
+            setQuizHeading(`AI Generated Quiz for "${subject}"`)
 
         } catch (error) {
             console.log(error)
@@ -212,6 +228,7 @@ const Quiz = () => {
 
 
             {/* Quiz Content */}
+            <h1 className="text-2xl font-bold block text-center mt-5">{quizHeading}</h1>
             <div
                 className="max-w-md mx-auto my-10 p-6 bg-white bg-cover bg-center rounded-lg shadow-md"
                 style={{ backgroundImage: `url(${backgroundImage})`, backgroundBlendMode: 'overlay' }}
