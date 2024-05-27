@@ -1,1 +1,54 @@
-{"questions":[{"question":"Which of the following is the largest continent?","options":["Asia","Africa","Europe","North America"],"answer":"Asia"},{"question":"Who is known as the 'Father of Modern Physics'?","options":["Isaac Newton","Albert Einstein","Stephen Hawking","Marie Curie"],"answer":"Albert Einstein"},{"question":"What is the chemical name for salt?","options":["Sodium Chloride","Potassium Chloride","Magnesium Chloride","Calcium Chloride"],"answer":"Sodium Chloride"},{"question":"Which planet in our solar system is known for its prominent rings?","options":["Venus","Mars","Jupiter","Saturn"],"answer":"Saturn"},{"question":"Who is the author of the famous novel 'To Kill a Mockingbird'?","options":["Harper Lee","Jane Austen","J.R.R. Tolkien","Ernest Hemingway"],"answer":"Harper Lee"},{"question":"What is the capital of Australia?","options":["Sydney","Melbourne","Canberra","Perth"],"answer":"Canberra"},{"question":"Which animal is known for its ability to change color?","options":["Chameleon","Leopard","Zebra","Giraffe"],"answer":"Chameleon"},{"question":"What is the name of the largest ocean in the world?","options":["Atlantic Ocean","Indian Ocean","Arctic Ocean","Pacific Ocean"],"answer":"Pacific Ocean"},{"question":"Who is the founder of Microsoft?","options":["Bill Gates","Steve Jobs","Elon Musk","Larry Page"],"answer":"Bill Gates"},{"question":"Which country is home to the Great Wall of China?","options":["India","Russia","Japan","China"],"answer":"China"}]}
+{
+"questions": [
+{
+"question": "What is the name of the largest ocean on Earth?",
+"options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+"answer": "Pacific Ocean"
+},
+{
+"question": "Which country hosted the first FIFA World Cup in 1930?",
+"options": ["Brazil", "Uruguay", "Argentina", "Italy"],
+"answer": "Uruguay"
+},
+{
+"question": "What is the name of the tallest building in the world?",
+"options": ["Burj Khalifa", "Shanghai Tower", "Ping An Finance Center", "Makkah Royal Clock Tower"],
+"answer": "Burj Khalifa"
+},
+{
+"question": "Which element has the highest atomic number?",
+"options": ["Hydrogen", "Helium", "Uranium", "Plutonium"],
+"answer": "Uranium"
+},
+{
+"question": "What is the capital of Australia?",
+"options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+"answer": "Canberra"
+},
+{
+"question": "Which US President served the most terms in office?",
+"options": ["Abraham Lincoln", "Franklin D. Roosevelt", "George Washington", "Barack Obama"],
+"answer": "Franklin D. Roosevelt"
+},
+{
+"question": "What is the name of the largest mammal in the world?",
+"options": ["Elephant", "Blue Whale", "Giraffe", "Rhinoceros"],
+"answer": "Blue Whale"
+},
+{
+"question": "Which country has won the most FIFA World Cups?",
+"options": ["Brazil", "Italy", "Germany", "Argentina"],
+"answer": "Brazil"
+},
+{
+"question": "What is the name of the first computer programming language?",
+"options": ["Fortran", "BASIC", "C", "Assembly"],
+"answer": "Fortran"
+},
+{
+"question": "Which country has the longest coastline in the world?",
+"options": ["Canada", "Russia", "United States", "China"],
+"answer": "Canada"
+}
+]
+}
