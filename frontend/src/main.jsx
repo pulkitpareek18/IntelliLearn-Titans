@@ -5,7 +5,7 @@ import { createContext } from "react";
 
 export const server = import.meta.env.VITE_BACKEND_API_URL;
 
-export const Context = createContext({ isAuthenticated: false });
+export const Context = createContext({ isAuthenticated: true });
 
 const AppWrapper = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

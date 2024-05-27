@@ -6,26 +6,49 @@ import axios from 'axios';
 import logo from '../assets/intellilearn.jpeg';
 
 
+export const getCookie = (name) => {
+    const cookies = document.cookie.split("; ");
+    for (let i = 0; i < cookies.length; i++) {
+        const [cookieName, cookieValue] = cookies[i].split("=");
+        if (cookieName === name) {
+            return cookieValue;
+        }
+    }
+    return "";
+};
 
+function delete_cookie(name) {
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
 
 function Header() {
     const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`${server}/users/me`, { withCredentials: true }).then((res) => {
-            // console.log(res.data.user)
-            setUser(res.data.user)
-            setIsAuthenticated(true)
-        }).catch((err) => {
-            // toast.error(err.response.data.message) 
-            console.log(err)
-            setIsAuthenticated(false)
-        })
+
+            axios.get(`${server}/users/me`, { withCredentials: true }).then((res) => {
+                // console.log(res.data.user)
+                setUser(res.data.user)
+                setIsAuthenticated(true)
+
+            }).catch((err) => {
+                // toast.error(err.response.data.message) 
+                console.log(err)
+                setIsAuthenticated(false)
+                delete_cookie("loggedIn")
+            })
+
+       
     }, [])
 
+    if (isAuthenticated) {
+        document.cookie = "loggedIn=true";
+    }
 
 
+    const loggedIn = getCookie("loggedIn");
+    console.log(loggedIn);
 
     const logoutHandler = async () => {
         try {

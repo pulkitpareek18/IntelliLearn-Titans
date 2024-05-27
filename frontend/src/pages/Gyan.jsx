@@ -4,12 +4,11 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { FaArrowUp, FaMicrophone, FaMicrophoneSlash, FaVolumeUp, FaVolumeMute } from "react-icons/fa"; // Import the scroll-to-top, microphone, and volume icons
 import { Navigate } from "react-router-dom";
-import { Context } from "../main";
+import { getCookie } from "../components/Header";
 
 function Gyan() {
 
-    const { isAuthenticated } = useContext(Context);
-    if (!isAuthenticated) return <Navigate to={"/login"} />;
+    if (!getCookie("loggedIn")) return <Navigate to={"/login"} />;
 
     const [question, setQuestion] = useState("");
     const [answer, setAnswer] = useState("");

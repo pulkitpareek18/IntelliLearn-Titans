@@ -1,14 +1,9 @@
-import React, { useContext, useEffect } from 'react'
-import { Context } from '../main';
 import { Navigate } from 'react-router-dom';
-
+import { getCookie } from '../components/Header';
 
 const Profile = () => {
 
-    const  { user, isAuthenticated } = useContext(Context);
-    if(!isAuthenticated){
-        return <Navigate to="/login" />
-    }
+    if (!getCookie("loggedIn")) return <Navigate to={"/login"} />;
     
 
 console.log(user)
